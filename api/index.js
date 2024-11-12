@@ -17,8 +17,32 @@ app.get('/', (request, response) => {
 
 //Home Page
 app.get('/', (request, response) => {
-    response.send('<h1>API Homepage by Senior Dev Daniel Estrella </h1>');
-  });
+    response.send(`
+        <html>
+            <head>
+                <style>
+                    body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        background-color: #eef2f3;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                    }
+                    h1 {
+                        color: #4a90e2;
+                        border-bottom: 2px solid #4a90e2;
+                        padding-bottom: 10px;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>API Homepage by Senior Dev Daniel Estrella</h1>
+            </body>
+        </html>
+    `);
+});
 
 // Customers  
 const customerRouter = require('./Routes/customer');  
