@@ -22,6 +22,4 @@ app.use('/orders', orderRouter);
 const paymentRouter = require('./Routes/payment');  
 app.use('/payments', paymentRouter);
 
-module.exports = router;
-
 //Test
